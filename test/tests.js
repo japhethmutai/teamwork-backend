@@ -1,16 +1,8 @@
-var request = require("request"),
-    assert = require('assert'),
-    helloWorld = require("../app.js"),
-    base_url = "http://localhost:3000/";
+const expect = require('chai').expect
+const server = require('../app');
 
-describe("Hello World Server", function() {
-  describe("GET /", function() {
-    it("returns status code 200", function(done) {
-      request.get(base_url, function(error, response, body) {
-        //expect(response.statusCode).toBe(200);
-        assert.equal(200, response.statusCode);
-        done();
-      });
-    });
+describe('test', () => {
+  it('should return a string', () => {
+    expect('ci with travis').to.equal('ci with travis');
   });
 });
