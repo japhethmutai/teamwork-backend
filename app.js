@@ -15,14 +15,13 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-  res.status(201);
+  res.status(200);
   next();
 });
 
-app.use((req, res, next) => {
-  res.json({ message: 'Your request was successful!' });
-  next();
-});
+app.get('/', function(req, res){
+    res.send('Hello World');
+  });
 
 app.use((req, res, next) => {
   console.log('Response sent successfully!');
