@@ -1,0 +1,32 @@
+{
+  "name": "teamwork-backend",
+  "version": "1.0.0",
+  "description": "Teamwork App is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding. The application has been built on NodeJS, ExpressJS, and PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japhethmutai/teamwork-backend.git"
+  },
+  "keywords": [
+    "teamwork",
+    "nodejs",
+    "expressjs",
+    "postgresql"
+  ],
+  "author": "Japheth Mutai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/japhethmutai/teamwork-backend/issues"
+  },
+  "homepage": "https://github.com/japhethmutai/teamwork-backend#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.6.0",
+    "mocha": "^6.2.2",
+    "pg": "^7.12.1"
+  }
+}
