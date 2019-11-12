@@ -9,23 +9,9 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use((req, res, next) => {
-  console.log('Request received!');
-  next();
-});
-
-app.use((req, res, next) => {
-  res.status(201);
-  next();
-});
-
-app.use((req, res, next) => {
-  res.json({ message: 'Your request was successful!' });
-  next();
-});
-
-app.use((req, res, next) => {
-  console.log('Response sent successfully!');
-});
+//Define request response in root URL (/)
+app.get('/', (req, res) => {
+    res.send('ci with travis');
+  });
 
 module.exports = app;
