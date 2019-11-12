@@ -4,7 +4,8 @@
   "description": "Teamwork App is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding. The application has been built on NodeJS, ExpressJS, and PostgreSQL",
   "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "start": "NODE_ENV=dev nodemon server.js",
+    "test": "NODE_ENV=test mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
     "eslint": "^6.6.0",
     "mocha": "^6.2.2",
     "pg": "^7.12.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
