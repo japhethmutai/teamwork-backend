@@ -12,9 +12,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/v1/api/articles', articleRoutes);
-app.use('/v1/api/gifs', gifRoutes);
-app.use('/v1/api/feed', feedRoutes);
+app.use('/api/v1/articles', articleRoutes);
+app.use('/api/v1/gifs', gifRoutes);
+app.use('/api/v1/feed', feedRoutes);
 
 //Define request response in root URL (/)
 app.get('/', (req, res) => {
