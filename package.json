@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=dev nodemon server.js",
-    "test": "NODE_ENV=test mocha --exit"
+    "test": "NODE_ENV=test mocha --exit",
+    "dbCreate": "NODE_ENV=dev node -e 'require(\"./db\").createAllTables()'",
+    "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage"
   },
   "repository": {
     "type": "git",
@@ -27,6 +32,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "eslint": "^6.6.0",
+    "make-runnable": "^1.3.6",
     "mocha": "^6.2.2",
     "pg": "^7.12.1",
     "request": "^2.88.0",
