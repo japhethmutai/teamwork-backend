@@ -4,3 +4,21 @@ node_js:
 cache:
   directories:
     - "node_modules"
+
+install:
+  - npm install
+services:
+  - postgresql
+
+env:
+  global:
+  - NODE_ENV=test
+
+before_script:
+  - psql -c 'create database teamwork_test;' -U postgres
+  - psql -c "CREATE USER teamwork WITH PASSWORD 'JehovahGod';" -U postgres
+  - node db.js createAllTables
+script:
+  - npm test
+after_success:
+  - npm run coverage

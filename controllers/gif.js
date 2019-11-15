@@ -1,4 +1,4 @@
-const { pool } = require('../config')
+const { pool } = require('../db')
 
 exports.createGif = (req, res, next) => {
     
